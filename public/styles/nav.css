@@ -1,0 +1,40 @@
+/* nav.css */
+
+nav span {
+  font-family: 'Bungee', sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding: 1.5em;
+}
+
+
+/* Apply font-family to .nav-right and its direct children spans */
+.nav-right, .nav-right span {
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+.nav-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align text to the end, but leave out the icon */
+}
+
+.icon-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Icon styles should be kept simple, primarily for aesthetics (color, size, etc.) */
+nav .fas.fa-angle-double-down {
+  color: red;
+}
