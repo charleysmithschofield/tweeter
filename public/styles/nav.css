@@ -1,4 +1,4 @@
-nav.css
+/* nav.css */
 
 nav span {
   font-family: 'Bungee', sans-serif;
@@ -14,8 +14,9 @@ nav {
   color: #FFFFFF;
   padding: 1.5em;
   position: fixed;
+  top: 0;
+  left: 0;
 }
-
 
 /* Apply font-family to .nav-right and its direct children spans */
 .nav-right, .nav-right span {
