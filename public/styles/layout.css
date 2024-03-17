@@ -41,4 +41,5 @@ main {
   justify-content: center;
   background-color: inherit;
   width: 90%;
+  margin: 0 auto;
 }
