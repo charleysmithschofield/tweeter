@@ -15,7 +15,6 @@ nav {
   padding: 1.5em;
   position: fixed;
   top: 0;
-  left: 0;
 }
 
 /* Apply font-family to .nav-right and its direct children spans */
