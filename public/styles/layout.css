@@ -16,7 +16,7 @@ html {
  */
 
 body {
-  color: #545149;
+  color: #2f2e31;
   background-color: #f4f1ec;
   font-size: 24px;
 }
@@ -34,4 +34,11 @@ nav span {
 /* Apply Source Sans 3 font to everything in the body */
 body {
   font-family: "Source Sans 3", sans-serif;
+}
+/* Main element */
+main {
+  display: flex;
+  justify-content: center;
+  background-color: inherit;
+  width: 90%;
 }
