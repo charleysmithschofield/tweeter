@@ -2,8 +2,8 @@
 
 .container {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 
 .new-tweet {
@@ -15,8 +15,9 @@
   justify-content: center;
   border: none;
   width: 700px;
-  height: 200 px;
+  height: 100px;
   background-color: inherit;
+  padding: 1px;
 }
 
 .new-tweet button {
@@ -24,9 +25,10 @@
   background-color: #4056A1;
   color: #FFFFFF;
   float: left;
+  padding: 1px;
 }
 
 .new-tweet .counter {
-  font-weight: bold;
-  float: right;
+  display: flex;
+  justify-content: flex-end;
 }

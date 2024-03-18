@@ -39,8 +39,20 @@ body {
 main {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: inherit;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto; 
+}
+/* 
+h3 {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
 }
 
+p {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+} */
