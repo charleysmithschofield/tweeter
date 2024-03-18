@@ -23,8 +23,8 @@
 }
 
 .new-tweet .counter {
-  position: absolute;
-  right: 0;
-  justify-content: flex-end;
   font-weight: bold;
+  position: absolute;
+  bottom: 145px;
+  right: 10px;
 }

@@ -59,17 +59,17 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container"></main>
+    <section class="new-tweet">
+      <h2>Compose Tweet</h2>
+      <form action="/tweets" method="POST" enctype="application/x-www-form-urlencoded">
+        <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+        <div>
+          <button type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
+    </section>
   </body>
-  <section class="new-tweet">
-    <h2>Compose Tweet</h2>
-    <form action="/tweets" method="POST" enctype="application/x-www-form-urlencoded">
-      <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-      <div>
-        <button type="submit">Tweet</button>
-        <output name="counter" class="counter" for="tweet-text">140</output>
-      </div>
-    </form>
-  </section>
   <h3> Found: Dwarven Journal </h3>
   <p> Lennokon hástt ljále, sseið hulumir, eðusjóthi hafyng sifi ljót? Frillenge heirind frin föskki tarét hurvam fölínn. Mtnalátiði vegegan?
      ákars gljást murn fðalið korið þvaming mdin eirgn símerotó befiði. Egga marhv átrðu, hlegur rgeðvi heggg mitiri siromúð gingað visina þandir. Farver gætaregg rmérkúr hatvemltítt vætt lerð fllemið húna hlin hinikví?
