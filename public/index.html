@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="styles/nav.css">
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/new-tweet.css">
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -59,6 +60,16 @@
     <!-- Page-specific (main) content here -->
     <main class="container"></main>
   </body>
+  <section class="new-tweet">
+    <h2>Compose Tweet</h2>
+    <form action="/tweets" method="POST" enctype="application/x-www-form-urlencoded">
+      <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+      <div>
+        <button type="submit">Tweet</button>
+        <output name="counter" class="counter" for="tweet-text">140</output>
+      </div>
+    </form>
+  </section>
   <h3> Found: Dwarven Journal </h3>
   <p> Lennokon hástt ljále, sseið hulumir, eðusjóthi hafyng sifi ljót? Frillenge heirind frin föskki tarét hurvam fölínn. Mtnalátiði vegegan?
      ákars gljást murn fðalið korið þvaming mdin eirgn símerotó befiði. Egga marhv átrðu, hlegur rgeðvi heggg mitiri siromúð gingað visina þandir. Farver gætaregg rmérkúr hatvemltítt vætt lerð fllemið húna hlin hinikví?
