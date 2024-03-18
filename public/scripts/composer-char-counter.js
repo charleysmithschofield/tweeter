@@ -1,42 +1,5 @@
 // composer-char-counter.js
 
-
-// // test blur event
-// $(document).ready(function() {
-//   $('.new-tweet textarea').on('blur', function() {
-//     console.log(this);
-//   });
-// });
-
-// // test keydown event
-// $(document).ready(function() {
-//   $('.new-tweet textarea').on('keydown', function() {
-//     console.log('keydown event fired');
-//   });
-// });
-
-// // test keyup event
-// $(document).ready(function() {
-//   $('.new-tweet textarea').on('keyup', function() {
-//     console.log('keyup event fired');
-//   });
-// });
-
-// test keypress event
-// $(document).ready(function() {
-//   $('.new-tweet textarea').on('keypress', function() {
-//     console.log('keypress event fired');
-//   });
-// });
-
-// test change event
-// $(document).ready(function() {
-//   $('.new-tweet textarea').on('change', function() {
-//     console.log('change event fired');
-//   });
-// });
-
-
 $(document).ready(function() {
   $('.new-tweet textarea').on('input', function(event) {
     // Determine the value of the textarea that fired the event
