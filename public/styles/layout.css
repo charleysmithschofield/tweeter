@@ -44,15 +44,18 @@ main {
   width: 100%;
   margin: 0 auto; 
 }
-/* 
+
+
 h3 {
   display: flex;
   justify-content: center;
   padding: 5px;
+  margin: 2px;
 }
 
 p {
   display: flex;
   justify-content: center;
   padding: 5px;
-} */
+  margin: 10px;
+}
