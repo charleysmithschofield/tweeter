@@ -12,8 +12,7 @@
 }
 
 .new-tweet textarea {
-  display: flex;
-  justify-content: center;
+  align-items: center;
   border: none;
   width: 700px;
   height: 100px;
