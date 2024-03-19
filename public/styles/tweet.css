@@ -19,7 +19,7 @@
 }
 
 .tweets:hover {
-  transition: all 0.3s ease; /* transition effect to make the color change smoother */
+  transition: color 0.3s ease; /* transition effect to make the color change smoother */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* hover state on entire tweet with a shadow box applied */
 }
 
@@ -72,6 +72,6 @@ footer {
 }
 
 .action-icons i:hover {
-  transition: all 0.3s ease; /* transition effect to make the color change smoother */
+  transition: color 0.3s ease; /* transition effect to make the color change smoother */
   color: rgb(255, 0, 0); /* Change color of icon when hovered */
 }
