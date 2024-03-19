@@ -8,7 +8,7 @@
   align-items: flex-start; 
   border: 3px solid rgb(56, 56, 56);
   padding: 10px;
-  margin-bottom: 20px; /* Add space between tweets */
+  margin-bottom: 10px; /* Add space between tweets */
 }
 
 .tweets {
@@ -45,8 +45,8 @@ header {
   display: flex;
   flex-direction: row; /* Arrange items horizontally */
   justify-content: flex-start; /* Align content to the start of the container horizontally */
-  border-bottom: 3px solid rgb(106, 105, 105); /* Add border at the bottom with specified color */
   font-size: 0.9em;
+  margin-bottom: 20px;
 }
 
 footer {
@@ -55,10 +55,16 @@ footer {
   align-items: center; /* Center the icons vertically */
   width: 100%; /* Set width to 100% of the parent container */
   font-size: 0.8em;
+  border-top: 3px solid rgb(106, 105, 105); /* Add border at the bottom with specified color */
 }
 
 .action-icons {
   display: flex;
   align-items: center; /* Align items vertically */
   font-size: 0.8em;
+  color: rgba(52, 36, 232, 0.85)
+}
+
+.action-icons i:hover {
+  color: rgb(1, 190, 23); /* Change color of icon when hovered */
 }
