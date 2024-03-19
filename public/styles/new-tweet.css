@@ -8,6 +8,7 @@
 }
 
 .new-tweet {
+  align-self: center;
   text-align: left;
   margin: 15px;
   width: 95%;
