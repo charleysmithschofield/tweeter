@@ -40,7 +40,7 @@ header {
   margin: 5px;
 }
 
-.username {
+.tweet-username {
   display: flex;
   justify-content: flex-end; /* Align username to the end of the container horizontally */
   margin: 5px;
@@ -68,10 +68,10 @@ footer {
   display: flex;
   align-items: center; /* Align items vertically */
   font-size: 0.8em;
-  color: rgba(52, 36, 232, 0.85)
+  color: rgba(18, 3, 188, 0.85)
 }
 
 .action-icons i:hover {
   transition: color 0.3s ease; /* transition effect to make the color change smoother */
-  color: rgb(1, 190, 23); /* Change color of icon when hovered */
+  color: rgb(255, 0, 0); /* Change color of icon when hovered */
 }
