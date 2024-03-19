@@ -46,6 +46,7 @@ header {
   flex-direction: row; /* Arrange items horizontally */
   justify-content: flex-start; /* Align content to the start of the container horizontally */
   border-bottom: 3px solid rgb(106, 105, 105); /* Add border at the bottom with specified color */
+  font-size: 0.9em;
 }
 
 footer {
