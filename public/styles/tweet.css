@@ -50,12 +50,14 @@ header {
 
 footer {
   display: flex;
-  justify-content: space-between;
-  align-items: center; /* Vertically center the icons */
-  width: 100%;
+  justify-content: space-between; /* Distribute items evenly along the main axis */
+  align-items: center; /* Center the icons vertically */
+  width: 100%; /* Set width to 100% of the parent container */
+  font-size: 0.8em;
 }
 
 .action-icons {
   display: flex;
-  align-items: center;
+  align-items: center; /* Align items vertically */
+  font-size: 0.8em;
 }
