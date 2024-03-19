@@ -1,9 +1,11 @@
 /* nav.css */
 
+/* Font Family for Nav */
 nav span {
   font-family: 'Bungee', sans-serif;
 }
 
+/* Style for Nav */
 nav {
   display: flex;
   justify-content: space-between;

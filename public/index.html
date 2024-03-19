@@ -8,7 +8,7 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-    
+    <link rel="stylesheet" href="https://fontawesome.com/icons/user?f=classic&s=solid">
     
     <!-- Bungee Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/new-tweet.css">
+    <link rel="stylesheet" href="styles/tweet.css">
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -36,7 +37,7 @@
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
+    <!-- Navigation (Top) Bar -->
     <nav>
       <div class="nav-left">
         <span>tweeter</span>
@@ -59,7 +60,7 @@
     </div>
   </header>
 
-  <!-- Page-specific (main) content here -->
+  <!-- Compose New Tweet Container -->
   <main class="container">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
@@ -71,8 +72,35 @@
         </div>
       </form>
     </section>
+
+    <!-- Display Tweets Container-->
+    <section class="container">
+      <article class="tweets">
+        <header>
+          <!-- User Info -->
+          <div class="user-info">
+            <i class="fas fa-user"></i>
+            <p class="first-name">Charley</p>
+          </div>
+          <p class="username">@csmithschofield</p>
+        </header>
+        <!-- Tweet Content -->
+          <p class="tweet-content">Leopard sharks sure are neat creatures! They can grow up to 5.9 ft. long and weigh up to 41 lbs! They have a varied diet that includes shellfish, cephalopods, and fish.</p>
+        </div>
+        <footer>
+            <p class="posted-#-days-ago">10 days ago</p>
+            <div class="action-icons">
+            <!-- Flag Icon -->
+            <i class="fas fa-flag"></i>
+            <!-- Re-Tweet Icon -->
+            <i class="fas fa-retweet"></i>
+            <!-- Heart Icon -->
+            <i class="fas fa-heart"></i>
+          </div>
+        </footer>
+      </article>
+    </section>
+    
   </main>
-  <h3> Found: Dwarven Journal </h3>
-  <p> Lennokon hástt ljále, sseið hulumir, eðusjóthi hafyng sifi ljót? Frillenge heirind frin föskki tarét hurvam fölínn. Mtnalátiði vegegan? ákars gljást murn fðalið korið þvaming mdin eirgn símerotó befiði. Egga marhv átrðu, hlegur rgeðvi heggg mitiri siromúð gingað visina þandir. Farver gætaregg rmérkúr hatvemltítt vætt lerð fllemið húna hlin hinikví? Gamlgumikkomí sklokk sugaðin haræði, hetikramí. Veiði fusek hega ragdumi. Tóstutt múnum saunnof stitaf, leleyr vati sttir hanit ífér fanút? Óham ljókemlllis lerofókvíu þaðar, tiði turt mengæmeg, stturðumm. Dalaði marafiði vaði fðinum vanarar haunstvínami ganta vaumérfðarað gsirönni dupi þeið!</p>
 </body>
 </html>

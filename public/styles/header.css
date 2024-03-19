@@ -1,5 +1,6 @@
 /* header.css */
 
+/* Style for Header */
 .header {
   height: 400px;
   width: 100%;
@@ -11,6 +12,8 @@
   flex-direction: column;
 }
 
+
+/* Style for Avatar */
 .avatar {
   display: flex;
   flex-direction: column;
@@ -19,6 +22,7 @@
   padding-top: 30px;
 }
 
+/* Style for Name */
 .name {
   display: flex;
   flex-direction: column;
