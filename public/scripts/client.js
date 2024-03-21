@@ -68,7 +68,7 @@ const renderTweets = function(tweets) {
   tweets.forEach(tweet => {
     // Call createTweetElement to create a tweet element for the current tweet
     const $tweet = createTweetElement(tweet);
-    // Append the created tweet element to the #tweets-container
+    // Prepend the created tweet element to the #tweets-container
     $('#tweets-container').prepend($tweet);
   });
 };
