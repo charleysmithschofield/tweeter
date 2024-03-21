@@ -37,15 +37,38 @@ const renderTweets = function(tweets) {
     // Call createTweetElement to create a tweet element for the current tweet
     const $tweet = createTweetElement(tweet);
     // Append the created tweet element to the #tweets-container
-    $('#tweets-container').append($tweet);
+    $('#tweets-container').prepend($tweet);
   });
 };
 
 // Define function called createTweetElement that takes in a tweet as its argument
 const createTweetElement = function(tweet) {
-  // Create hardcoded tweets
-  const $tweet = $(`<article class="tweet">Hello world</article>`);
+  // Create a jQuery object for the tweet element
+  const $tweet = $(`
+    <article class="tweet">
+      <header>
+        <!-- User Info -->
+        <div class="user-info">
+          <i class="fas fa-user"></i>
+          <p class="first-name">Charley</p>
+        </div>
+        <p class="tweet-username">@csmithschofield</p>
+      </header>
+      <!-- Tweet Content -->
+        <p class="tweet-content">Leopard sharks sure are neat creatures! They can grow up to 5.9 ft. long and weigh up to 41 lbs! They have a varied diet that includes shellfish, cephalopods, and fish.</p>
+      <footer>
+          <p class="days-posted-ago">10 days ago</p>
+          <div class="action-icons">
+          <!-- Flag Icon -->
+          <i class="fas fa-flag"></i>
+          <!-- Re-Tweet Icon -->
+          <i class="fas fa-retweet"></i>
+          <!-- Heart Icon -->
+          <i class="fas fa-heart"></i>
+          </div>
+      </footer>
+    </article>
+  `);
   return $tweet;
 };
-
 renderTweets(data);
