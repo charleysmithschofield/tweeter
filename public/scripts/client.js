@@ -52,7 +52,7 @@ const createTweetElement = function(tweet) {
           <i class="fas fa-user"></i>
           <p class="first-name">${tweet.user.name}</p>
         </div>
-        <p class="tweet-username">${tweet.user.username}</p>
+        <p class="tweet-username">${tweet.user.handle}</p>
       </header>
       <!-- Tweet Content -->
         <p class="tweet-content">${tweet.content.text}</p>
