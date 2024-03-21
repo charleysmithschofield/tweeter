@@ -6,18 +6,17 @@
   display: flex;
   flex-direction: column; /* Arrange items vertically */
   align-items: flex-start; 
-  border: 3px solid rgb(56, 56, 56);
   padding: 10px;
   margin-bottom: 10px; /* Add space between tweets */
 }
 
-.tweets {
-  display: flex;
-  flex-direction: column; /* Arrange items vertically */
-  width: 100%; /* Set width to 100% of the parent container */
-  padding: 5px;
-  transition: color 0.3s ease; /* transition effect to make the color change smoother */
+.tweet {
+  width: 100%;
+  border: 3px solid rgb(56, 56, 56);
+  margin-bottom: 10px;
+  padding: 10px;
 }
+
 
 .tweets:hover {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* hover state on entire tweet with a shadow box applied */
@@ -33,7 +32,7 @@ header {
 
 .user-info {
   display: flex;
-  align-items: center; /* Align items vertically */
+  align-items: center;
 }
 
 .fas {
@@ -42,17 +41,19 @@ header {
 
 .tweet-username {
   display: flex;
-  justify-content: flex-end; /* Align username to the end of the container horizontally */
+  justify-content: flex-end; 
   margin: 5px;
   color: rgb(106, 105, 105); /* Set text color */
 }
 
 .tweet-content {
   display: flex;
-  flex-direction: row; /* Arrange items horizontally */
+  flex-direction: row;
   justify-content: flex-start; /* Align content to the start of the container horizontally */
   font-size: 0.9em;
   margin-bottom: 20px;
+  border-bottom: 3px solid rgb(106, 105, 105); /* Add border at the bottom with specified color */
+  padding: 10px;
 }
 
 footer {
@@ -61,12 +62,13 @@ footer {
   align-items: center; /* Center the icons vertically */
   width: 100%; /* Set width to 100% of the parent container */
   font-size: 0.8em;
-  border-top: 3px solid rgb(106, 105, 105); /* Add border at the bottom with specified color */
+  
 }
+
 
 .action-icons {
   display: flex;
-  align-items: center; /* Align items vertically */
+  align-items: center; 
   font-size: 0.8em;
   color: rgb(18, 3, 188);
   transition: color 0.3s ease; /* transition effect to make the color change smoother */
