@@ -30,17 +30,6 @@ const data = [
   }
 ];
 
-// Declare a function called renderTweets that takes tweets as its argument
-const renderTweets = function(tweets) {
-  // Loop through each tweet in the array
-  tweets.forEach(tweet => {
-    // Call createTweetElement to create a tweet element for the current tweet
-    const $tweet = createTweetElement(tweet);
-    // Append the created tweet element to the #tweets-container
-    $('#tweets-container').prepend($tweet);
-  });
-};
-
 // Define function called createTweetElement that takes in a tweet as its argument
 const createTweetElement = function(tweet) {
   // Create a jQuery object for the tweet element
@@ -71,4 +60,17 @@ const createTweetElement = function(tweet) {
   `);
   return $tweet;
 };
+
+
+// Declare a function called renderTweets that takes tweets as its argument
+const renderTweets = function(tweets) {
+  // Loop through each tweet in the array
+  tweets.forEach(tweet => {
+    // Call createTweetElement to create a tweet element for the current tweet
+    const $tweet = createTweetElement(tweet);
+    // Append the created tweet element to the #tweets-container
+    $('#tweets-container').prepend($tweet);
+  });
+};
+
 renderTweets(data);
