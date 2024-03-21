@@ -50,12 +50,12 @@ const createTweetElement = function(tweet) {
         <!-- User Info -->
         <div class="user-info">
           <i class="fas fa-user"></i>
-          <p class="first-name">Charley</p>
+          <p class="first-name">${tweet.user.name}</p>
         </div>
-        <p class="tweet-username">@csmithschofield</p>
+        <p class="tweet-username">${tweet.user.username}</p>
       </header>
       <!-- Tweet Content -->
-        <p class="tweet-content">Leopard sharks sure are neat creatures! They can grow up to 5.9 ft. long and weigh up to 41 lbs! They have a varied diet that includes shellfish, cephalopods, and fish.</p>
+        <p class="tweet-content">${tweet.content.text}</p>
       <footer>
           <p class="days-posted-ago">10 days ago</p>
           <div class="action-icons">
