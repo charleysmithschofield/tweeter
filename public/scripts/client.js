@@ -74,3 +74,29 @@ const renderTweets = function(tweets) {
 };
 
 renderTweets(data);
+
+
+$(document).ready(function() {
+  // Event listener for submit event
+  $("form").on("submit", function(event) {
+    // prevent default form submission behaviour
+    event.preventDefault();
+  
+    // Serialize form data
+    const formData = $(this).serialize();
+
+    // AJAX POST request to post form data
+    $.ajax({
+      type: "POST", // HTTP Method
+      url: "/tweets", // Endpoint URL
+      data: formData, // serialized formData
+      success: function(response) {
+        console.log("Form submitted successfully:", response);
+      },
+      error: function(jqXHR, textStatus, error) {
+        console.log("Form submission failed:" + textStatus, error);
+      }
+    });
+  });
+});
+

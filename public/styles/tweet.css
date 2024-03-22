@@ -17,7 +17,6 @@
   padding: 10px;
 }
 
-
 .tweets:hover {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* hover state on entire tweet with a shadow box applied */
 }
@@ -61,10 +60,8 @@ footer {
   justify-content: space-between; /* Distribute items evenly along the main axis */
   align-items: center; /* Center the icons vertically */
   width: 100%; /* Set width to 100% of the parent container */
-  font-size: 0.8em;
-  
+  font-size: 0.8em; 
 }
-
 
 .action-icons {
   display: flex;
