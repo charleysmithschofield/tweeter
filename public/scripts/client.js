@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+// CREATE TWEET
 // Define function called createTweetElement that takes in a tweet as its argument
 const createTweetElement = function(tweet) {
   // Create a jQuery object for the tweet element
@@ -36,6 +37,52 @@ const createTweetElement = function(tweet) {
 };
 
 
+// POST TWEET
+// jQuery ready function to ensure DOM is fully loaded
+$(document).ready(function() {
+  // Event listener for submit event
+  $("form").on("submit", function(event) {
+    // prevent default form submission behaviour
+    event.preventDefault();
+
+    // Get the tweet text from the textarea
+    const tweetText = $('#tweet-text').val();
+    
+    // Check if tweet is empty
+    if (tweetText === '') {
+      // Display an error message for empty tweet
+      alert("Tweet content cannot be empty.");
+      return; // Exit the function to prevent the form submission
+    }
+
+    // Check if the tweet text exceed the character limit
+    if (tweetText.length > 140) {
+      // Display an error message for tweet exceeding character limit
+      alert("Tweet content cannot the 140 character limit. Please shorten your tweet.");
+      return; // Exit the function to prevent the form submission
+    }
+    
+    // Serialize form data
+    const formData = $(this).serialize();
+
+    // AJAX POST request to post form data
+    $.ajax({
+      type: "POST", // HTTP Method
+      url: "/tweets", // Endpoint URL
+      data: formData, // serialized formData
+      success: function(response) {
+        console.log("Form submitted successfully:", response);
+        $("form")[0].reset(); // Reset the form
+        loadTweets(); // Reload the tweets
+      },
+      error: function(jqXHR, textStatus, error) {
+        console.log("Form submission failed:" + textStatus, error);
+      }
+    });
+  });
+});
+
+// RENDER TWEET
 // Declare a function called renderTweets that takes tweets as its argument
 const renderTweets = function(tweets) {
   // Loop through each tweet in the array
@@ -48,6 +95,7 @@ const renderTweets = function(tweets) {
 };
 
 
+// LOAD TWEETS
 // Function to loadTweets dynamically from the server
 const loadTweets = function() {
   // AJAX GET request to fetch tweets from the server
@@ -69,31 +117,4 @@ const loadTweets = function() {
 $(document).ready(function() {
   // Call loadTweets function on page load
   loadTweets();
-});
-
-// jQuery ready function to ensure DOM is fully loaded
-$(document).ready(function() {
-  // Event listener for submit event
-  $("form").on("submit", function(event) {
-    // prevent default form submission behaviour
-    event.preventDefault();
-  
-    // Serialize form data
-    const formData = $(this).serialize();
-
-    // AJAX POST request to post form data
-    $.ajax({
-      type: "POST", // HTTP Method
-      url: "/tweets", // Endpoint URL
-      data: formData, // serialized formData
-      success: function(response) {
-        console.log("Form submitted successfully:", response);
-        $("form")[0].reset(); // Reset the form
-        loadTweets(); // Reload the tweets
-      },
-      error: function(jqXHR, textStatus, error) {
-        console.log("Form submission failed:" + textStatus, error);
-      }
-    });
-  });
 });
