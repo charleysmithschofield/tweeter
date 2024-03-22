@@ -75,7 +75,30 @@ const renderTweets = function(tweets) {
 
 renderTweets(data);
 
+// jQuery ready function to ensure DOM is fully loaded
+$(document).ready(function() {
+  // Function to loadTweets
+  const loadTweets = function() {
+    // AJAX GET request
+    $.ajax({
+      url: '/tweets',
+      type: 'GET',
+      dataType: 'json',
+      success: function(response) {
+        console.log('Tweets fetched:', response);
+        renderTweets(response); // Render fetched tweets
+      },
+      error: function(xhr, status, error) {
+        console.error('Error fetching tweets:', error);
+      }
+    });
+  }
+  
+  // Call loadTweets function on page load
+  loadTweets();
+});
 
+// jQuery ready function to ensure DOM is fully loaded
 $(document).ready(function() {
   // Event listener for submit event
   $("form").on("submit", function(event) {
@@ -99,4 +122,3 @@ $(document).ready(function() {
     });
   });
 });
-
