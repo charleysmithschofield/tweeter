@@ -82,7 +82,8 @@ $(document).ready(function() {
       data: formData, // serialized formData
       success: function(response) {
         console.log("Form submitted successfully:", response);
-        $("form")[0].reset(); // Reset the form
+        // Reset the form only if the post was successful
+        $("form")[0].reset();
         loadTweets(); // Reload the tweets
       },
       error: function(jqXHR, textStatus, error) {
