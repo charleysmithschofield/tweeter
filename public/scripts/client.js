@@ -37,31 +37,41 @@ const createTweetElement = function(tweet) {
 };
 
 
+// TWEET VALIDATION
+// Function to check if the tweet is valid
+const isTweetValid = function(tweetText) {
+  // Check if tweet text is empty
+  if (tweetText === '') {
+    // Display an error message for empty tweet
+    alert("Tweet content cannot be empty.");
+    return false; // Exit the function to prevent the form submission
+  } else if (tweetText.length > 140) {
+    // Display an error message for tweet exceeding character limit
+    alert("Tweet content cannot the 140 character limit. Please shorten your tweet.");
+    return false; // Exit the function to prevent the form submission
+  } else {
+    return true;
+  }
+};
+
 // POST TWEET
 // jQuery ready function to ensure DOM is fully loaded
+
 $(document).ready(function() {
   // Event listener for submit event
   $("form").on("submit", function(event) {
     // prevent default form submission behaviour
     event.preventDefault();
 
-    // Get the tweet text from the textarea
-    const tweetText = $('#tweet-text').val();
+    // Get the tweet text value from the textarea
+    const tweetText = $('#tweet-text').val().trim();
     
-    // Check if tweet is empty
-    if (tweetText === '') {
-      // Display an error message for empty tweet
-      alert("Tweet content cannot be empty.");
-      return; // Exit the function to prevent the form submission
+    // Validate tweet content using isTweetValid function call
+    if(!isTweetValid(tweetText)) {
+      // Exit the function if tweet is invalid
+      return;
     }
-
-    // Check if the tweet text exceed the character limit
-    if (tweetText.length > 140) {
-      // Display an error message for tweet exceeding character limit
-      alert("Tweet content cannot the 140 character limit. Please shorten your tweet.");
-      return; // Exit the function to prevent the form submission
-    }
-    
+ 
     // Serialize form data
     const formData = $(this).serialize();
 
