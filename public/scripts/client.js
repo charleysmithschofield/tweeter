@@ -71,7 +71,6 @@ $(document).ready(function() {
   loadTweets();
 });
 
-
 // jQuery ready function to ensure DOM is fully loaded
 $(document).ready(function() {
   // Event listener for submit event
@@ -89,6 +88,8 @@ $(document).ready(function() {
       data: formData, // serialized formData
       success: function(response) {
         console.log("Form submitted successfully:", response);
+        $("form")[0].reset(); // Reset the form
+        loadTweets(); // Reload the tweets
       },
       error: function(jqXHR, textStatus, error) {
         console.log("Form submission failed:" + textStatus, error);
