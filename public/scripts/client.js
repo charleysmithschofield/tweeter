@@ -3,14 +3,17 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-// Escape function
+
+
+// ESCAPE FUNCTION (prevents cross-site scripting)
 const escapeHTML = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
-// CREATE TWEET
-// Define function called createTweetElement that takes in a tweet as its argument
+
+
+// CREATE TWEET FUNCTION
 const createTweetElement = function(tweet) {
   // Escape user-generate content
   const safeName = escapeHTML(tweet.user.name);
@@ -53,8 +56,8 @@ const createTweetElement = function(tweet) {
   return $tweet;
 };
 
-// TWEET VALIDATION
-// Function to check if the tweet is valid
+
+// TWEET VALIDATION FUNCTION (function to check if the tweet is valid)
 const isTweetValid = function(tweetText) {
   // Hide error container initially
   $(`#error-container`).hide();
@@ -115,6 +118,7 @@ $(document).ready(function() {
   });
 });
 
+
 // RENDER TWEET
 // Declare a function called renderTweets that takes tweets as its argument
 const renderTweets = function(tweets) {
@@ -128,8 +132,7 @@ const renderTweets = function(tweets) {
 };
 
 
-// LOAD TWEETS
-// Function to loadTweets dynamically from the server
+// LOAD TWEETS (Function to loadTweets dynamically from the server)
 const loadTweets = function() {
   // AJAX GET request to fetch tweets from the server
   $.ajax({
