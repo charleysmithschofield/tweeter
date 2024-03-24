@@ -56,23 +56,29 @@ const createTweetElement = function(tweet) {
 // TWEET VALIDATION
 // Function to check if the tweet is valid
 const isTweetValid = function(tweetText) {
-  // Check if tweet text is empty
+  // Hide error container initially
+  $(`#error-container`).hide();
+
+  // Check if the tweet text is empty
   if (tweetText === '') {
     // Display an error message for empty tweet
-    alert("Tweet content cannot be empty.");
-    return false; // Exit the function to prevent the form submission
+    $('#error-container').text("⚠️ Tweet content cannot be empty. ⚠️").slideDown();
+    // Exit the function to prevent the form submission
+    return false;
+    // Check if the tweet text is longer than 140 character limit
   } else if (tweetText.length > 140) {
-    // Display an error message for tweet exceeding character limit
-    alert("Tweet content cannot the 140 character limit. Please shorten your tweet.");
-    return false; // Exit the function to prevent the form submission
-  } else {
-    return true;
+    // Display an error message for a tweet that exceeds 140 characters
+    $('#error-container').text("⚠️ Tweet content cannot exceed the 140 character limit. Please shorten your tweet. ⚠️").slideDown();
+    // Exit the function to prevent the form submission
+    return false;
   }
+  // If the tweet is valid, return true
+  return true;
 };
+
 
 // POST TWEET
 // jQuery ready function to ensure DOM is fully loaded
-
 $(document).ready(function() {
   // Event listener for submit event
   $("form").on("submit", function(event) {
