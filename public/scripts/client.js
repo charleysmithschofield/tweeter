@@ -3,39 +3,55 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
+// Escape function
+const escapeHTML = function(str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 // CREATE TWEET
 // Define function called createTweetElement that takes in a tweet as its argument
 const createTweetElement = function(tweet) {
-  // Create a jQuery object for the tweet element
+  // Escape user-generate content
+  const safeName = escapeHTML(tweet.user.name);
+  const safeHandle = escapeHTML(tweet.user.handle);
+  const safeText = escapeHTML(tweet.content.text);
+
+  // Create a jQuery object for the tweet element structure without user content
   const $tweet = $(`
     <article class="tweet">
       <header>
         <!-- User Info -->
         <div class="user-info">
           <i class="fas fa-user"></i>
-          <p class="first-name">${tweet.user.name}</p>
+          <p class="first-name"></p>
         </div>
-        <p class="tweet-username">${tweet.user.handle}</p>
+        <p class="tweet-username"></p>
       </header>
       <!-- Tweet Content -->
-        <p class="tweet-content">${tweet.content.text}</p>
+      <p class="tweet-content"></p>
       <footer>
-          <p class="days-posted-ago">${timeago.format(tweet.created_at)}</p>
-          <div class="action-icons">
+        <p class="days-posted-ago"></p>
+        <div class="action-icons">
           <!-- Flag Icon -->
           <i class="fas fa-flag"></i>
           <!-- Re-Tweet Icon -->
           <i class="fas fa-retweet"></i>
           <!-- Heart Icon -->
           <i class="fas fa-heart"></i>
-          </div>
+        </div>
       </footer>
     </article>
   `);
+
+  // Safely add user-generated content as text
+  $tweet.find('.first-name').text(tweet.user.name);
+  $tweet.find('.tweet-username').text(tweet.user.handle);
+  $tweet.find('.tweet-content').text(tweet.content.text);
+  $tweet.find('.days-posted-ago').text(timeago.format(tweet.created_at));
+
   return $tweet;
 };
-
 
 // TWEET VALIDATION
 // Function to check if the tweet is valid
