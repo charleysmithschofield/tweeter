@@ -8,6 +8,7 @@
   align-items: flex-start; 
   padding: 10px;
   margin-bottom: 10px; /* Add space between tweets */
+  margin-block: 25px;
 }
 
 .tweet {
