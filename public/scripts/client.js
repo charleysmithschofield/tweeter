@@ -116,6 +116,7 @@ const loadTweets = function() {
     dataType: 'json',
     success: function(response) {
       console.log('Tweets fetched:', response);
+      $('#tweets-container').empty(); // empty tweets container so old tweets aren't duplicated when new ones are loaded
       renderTweets(response); // Callback to render fetched tweets
     },
     error: function(xhr, status, error) {
