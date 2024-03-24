@@ -125,8 +125,5 @@ const loadTweets = function() {
   });
 };
 
-// jQuery ready function to ensure DOM is fully loaded
-$(document).ready(function() {
-  // Call loadTweets function on page load
-  loadTweets();
-});
+// Call loadTweets function on page load
+loadTweets();
