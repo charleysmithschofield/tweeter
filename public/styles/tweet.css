@@ -18,16 +18,17 @@
   padding: 10px;
 }
 
-.tweets:hover {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* hover state on entire tweet with a shadow box applied */
+.tweet:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
+
 
 header {
   display: flex;
-  flex-direction: row; /* Arrange items horizontaly */
-  justify-content: space-between; /* Distribute items evenly along the main axis */
-  align-items: center; /* Ensures vertical alignment is centered */
-  width: 100%; /* Set width to 100% of the parent container */
+  flex-direction: row; 
+  justify-content: space-between; 
+  align-items: center; 
+  width: 100%; 
 }
 
 .user-info {
@@ -43,24 +44,24 @@ header {
   display: flex;
   justify-content: flex-end; 
   margin: 5px;
-  color: rgb(106, 105, 105); /* Set text color */
+  color: rgb(106, 105, 105); 
 }
 
 .tweet-content {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start; /* Align content to the start of the container horizontally */
+  justify-content: flex-start; 
   font-size: 0.9em;
   margin-bottom: 20px;
-  border-bottom: 3px solid rgb(106, 105, 105); /* Add border at the bottom with specified color */
+  border-bottom: 3px solid rgb(106, 105, 105);
   padding: 10px;
 }
 
 footer {
   display: flex;
-  justify-content: space-between; /* Distribute items evenly along the main axis */
-  align-items: center; /* Center the icons vertically */
-  width: 100%; /* Set width to 100% of the parent container */
+  justify-content: space-between;
+  align-items: center; 
+  width: 100%; 
   font-size: 0.8em; 
 }
 
@@ -69,7 +70,7 @@ footer {
   align-items: center; 
   font-size: 0.8em;
   color: rgb(18, 3, 188);
-  transition: color 0.3s ease; /* transition effect to make the color change smoother */
+  transition: color 0.3s ease;
 }
 
 .action-icons i:hover {
