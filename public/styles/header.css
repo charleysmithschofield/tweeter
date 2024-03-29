@@ -12,7 +12,6 @@
   flex-direction: column;
 }
 
-
 /* Style for Avatar */
 .avatar {
   display: flex;
@@ -28,4 +27,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+/* 
+/* Media Query for Desktop */
+@media screen and (min-width: 1024px) {
+  .header-container {
+    display: flex;
+    flex-direction: row; /* This positions .header and .content side by side */
+  }
+  
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 440px;
+    margin-top: 200px;
+    margin-left: 25px;
+  }
 }

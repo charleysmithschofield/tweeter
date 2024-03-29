@@ -60,3 +60,20 @@
   border-radius: 5px;
   padding: 10px;
 }
+
+/* Media Query Desktop */
+@media screen and (min-width: 1024px) {
+
+  .contain-header-new-tweets-tweets {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  main {
+    margin-top: 300px;
+    width: 60%;
+    margin: 30px;
+    margin-top: 170px;
+  }
+}
