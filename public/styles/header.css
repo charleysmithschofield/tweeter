@@ -34,6 +34,7 @@
   .header-container {
     display: flex;
     flex-direction: row; /* This positions .header and .content side by side */
+    margin: 30px;
   }
   
   .header {
@@ -43,6 +44,5 @@
     height: 350px;
     width: 440px;
     margin-top: 200px;
-    margin-left: 25px;
   }
 }
