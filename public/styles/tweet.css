@@ -75,14 +75,3 @@ footer {
 .action-icons i:hover {
   color: rgb(255, 0, 0); /* Change color of icon when hovered */
 }
-
-
-/* Media query for screens with a minimum of 1024px */
-/* @media screen and (min-width: 1024px) {
-  .header {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    width:
-  }
-} */
