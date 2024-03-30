@@ -46,6 +46,7 @@ main {
   margin: 0 auto; 
 }
 
+/* Style for h3 */
 h3 {
   display: flex;
   justify-content: center;
@@ -53,6 +54,7 @@ h3 {
   margin: 2px;
 }
 
+/* Style for paragraph */
 p {
   display: flex;
   justify-content: center;

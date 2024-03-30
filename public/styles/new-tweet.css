@@ -1,5 +1,6 @@
 /* new-tweet.css */
 
+/* Style for container */
 .container {
   display: flex;
   align-items: center;
@@ -7,6 +8,7 @@
   width: 100%;
 }
 
+/* Style for new-tweet */
 .new-tweet {
   display: block;
   align-self: center;
@@ -15,6 +17,7 @@
   width: 95%;
 }
 
+/* Style for new-tweet text area */
 .new-tweet textarea {
   align-items: center;
   border: none;
@@ -25,10 +28,12 @@
   padding: 5px;
 }
 
+/* Style for text area placeholder  */
 .new-tweet textarea::placeholder {
   border-bottom: 3px solid rgb(116, 116, 116); 
 }
 
+/* Style for new-tweet button */
 .new-tweet button {
   font-family: 'Bungee', sans-serif;
   background-color: #4056A1;
@@ -38,16 +43,19 @@
   margin: 5px;
 }
 
+/* Style for new-tweet counter */
 .new-tweet .counter {
   display: flex;
   justify-content: flex-end;
   font-weight: bold;
 }
 
+/* Style for new-tweet counter when over character limit */
 .negative {
   color: red;
 }
 
+/* Style for error container */
 .error-container {
   display: none;
   width: 100%;

@@ -1,16 +1,15 @@
 /* tweet.css */
 
-/* Style for Each Tweet */
-
+/* Style for tweet container */
 .container {
   display: flex;
   flex-direction: column; 
   align-items: flex-start; 
   padding: 10px;
-
   margin-block: 25px;
 }
 
+/* Style for individual tweet */
 .tweet {
   width: 100%;
   border: 3px solid rgb(56, 56, 56);
@@ -18,10 +17,12 @@
   padding: 10px;
 }
 
+/* Box Shadow when user hovers over a tweet */
 .tweet:hover {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* Style for tweet header */
 header {
   display: flex;
   flex-direction: row; 
@@ -30,6 +31,7 @@ header {
   width: 100%; 
 }
 
+/* Style for tweet user info */
 .user-info {
   display: flex;
   align-items: center;
@@ -39,6 +41,7 @@ header {
   margin: 5px;
 }
 
+/* Style for tweet username */
 .tweet-username {
   display: flex;
   justify-content: flex-end; 
@@ -46,6 +49,7 @@ header {
   color: rgb(106, 105, 105); 
 }
 
+/* Style for tweet content  */
 .tweet-content {
   display: flex;
   flex-direction: row;
@@ -56,6 +60,7 @@ header {
   padding: 10px;
 }
 
+/* Style for tweet footer */
 footer {
   display: flex;
   justify-content: space-between;
@@ -64,6 +69,7 @@ footer {
   font-size: 0.8em; 
 }
 
+/* Style for action icons */
 .action-icons {
   display: flex;
   align-items: center; 
@@ -72,6 +78,7 @@ footer {
   transition: color 0.3s ease;
 }
 
+/* Style for when user hovers over action icons */
 .action-icons i:hover {
   color: rgb(255, 0, 0); /* Change color of icon when hovered */
 }

@@ -19,18 +19,19 @@ nav {
   top: 0;
 }
 
+/* Style for nav-right */
 .nav-right {
   display: flex;
   flex-direction: column;
   align-items: center; /* Align text to the end, but leave out the icon */
 }
 
+/* Style for icon container */
 .icon-container {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-
 
 /* Icon styles should be kept simple, primarily for aesthetics (color, size, etc.) */
 nav .fas.fa-angle-double-down {
