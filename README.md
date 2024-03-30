@@ -27,7 +27,10 @@ This repository is the starter code for the project: Students will fork and clon
 ![Alt text](docs/maintweeter.png)
 
 ## Empty Tweets
+#### Oh no it looks like you forgot to add content to your new tweet!
+Don't worry Tweeter will let you know your tweet is empty.
 ![Alt text](docs/tweetempty.png)
 
 ## Long Tweets
+#### No one likes a chatter-box! Try to keep things clear and concise. Tweeter will remind you to keep your tweets under 140 characters.
 ![Alt text](docs/longtweet.png)
