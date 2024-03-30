@@ -21,15 +21,6 @@ nav {
   top: 0;
 }
 
-.nav span {
-  font-family: 'Bungee', sans-serif;
-}
-
-/* Apply font-family to .nav-right and its direct children spans */
-/* .nav-right, .nav-right span {
-  font-family: 'Bungee', sans-serif;
-} */
-
 .nav-right {
   display: flex;
   flex-direction: column;
