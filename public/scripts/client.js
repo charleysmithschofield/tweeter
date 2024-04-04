@@ -13,12 +13,13 @@ const escapeHTML = function(str) {
 };
 
 
-// CREATE TWEET FUNCTION
 const createTweetElement = function(tweet) {
-  // Escape user-generate content
+  // Escape user-generated content
   const safeName = escapeHTML(tweet.user.name);
   const safeHandle = escapeHTML(tweet.user.handle);
-  const safeText = escapeHTML(tweet.content.text);
+  
+  // Do not escape tweet content text coming from the server
+  const safeText = tweet.content.text;
 
   // Create a jQuery object for the tweet element structure without user content
   const $tweet = $(`
@@ -48,9 +49,9 @@ const createTweetElement = function(tweet) {
   `);
 
   // Safely add user-generated content as text
-  $tweet.find('.first-name').text(tweet.user.name);
-  $tweet.find('.tweet-username').text(tweet.user.handle);
-  $tweet.find('.tweet-content').text(tweet.content.text);
+  $tweet.find('.first-name').text(safeName);
+  $tweet.find('.tweet-username').text(safeHandle);
+  $tweet.find('.tweet-content').text(safeText);
   $tweet.find('.days-posted-ago').text(timeago.format(tweet.created_at));
 
   return $tweet;
@@ -109,7 +110,14 @@ $(document).ready(function() {
         console.log("Form submitted successfully:", response);
         // Reset the form only if the post was successful
         $("form")[0].reset();
-        loadTweets(); // Reload the tweets
+        // Locate the form element
+        const form = $("form");
+        // Locate the counter within the form
+        const counter = form.find('output[name="counter"]');
+        // Reset the counter to 140
+        counter.text(140);
+        // Reload the tweets
+        loadTweets();
       },
       error: function(jqXHR, textStatus, error) {
         console.log("Form submission failed:" + textStatus, error);
